@@ -1,0 +1,129 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+.main {
+  min-height: 90vh;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.main-box {
+  width: 100%;
+  margin: 4rem 2rem;
+  height: calc(90vh - 2rem);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ff5851;
+  animation: width 2s ease-in-out forwards;
+}
+h1 {
+  z-index: 2;
+  padding-left: 3rem;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 3px;
+  color: #3d3b44;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  animation: disk 2s ease-in-out forwards;
+}
+span {
+  font-size: 3.5rem;
+}
+@keyframes disk {
+  from {
+    opacity: 0;
+    font-size: 0rem;
+    transform: translateX(-500px) rotateZ(-180deg);
+  }
+  to {
+    opacity: 1;
+    font-size: 2.8rem;
+    transform: translateX(0px) rotateZ(360deg);
+  }
+}
+
+@keyframes width {
+  0% {
+    width: calc(100% - 2rem);
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.second {
+  height: 100vh;
+  display: flex;
+}
+.header {
+  height: 10vh;
+  padding-top: 1rem;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Poppins";
+  letter-spacing: 3px;
+  animation: neon 0.08s ease-in-out infinite alternate;
+}
+li {
+  background: rgba(207, 77, 77, 1);
+  padding: 0.2rem 0.8rem;
+  border-radius: 5px;
+  outline: none;
+}
+.img {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  width: 80vh;
+  height: 80vh;
+  /* background-image: url("./undraw_working_remotely_jh40.svg");  */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.img svg {
+  transform: translateY(-100px);
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92),
+      0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52),
+      0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78),
+      0 0 54px rgba(30, 132, 242, 0.92);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
+      0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58),
+      0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88),
+      0 0 60px rgba(30, 132, 242, 1);
+  }
+}
+
+#woman{
+animation:woman 2s linear infinite alternate;
+}
+
+@keyframes woman{
+  0%{
+    transform: rotateZ(10deg);
+    transform-origin: center;
+  }
+  100%
+  {
+    transform: rotateZ(-10deg);
+    transform-origin: center;
+  }
+
+}
