@@ -1,0 +1,227 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.main {
+  min-height: 90vh;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.main-box {
+  width: 100%;
+  margin: 4rem 2rem;
+  height: calc(90vh - 2rem);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ff5851;
+  animation: width 2s ease-in-out forwards;
+}
+h1 {
+  z-index: 2;
+  padding-left: 3rem;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 3px;
+  color: #3d3b44;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  animation: disk 2s ease-in-out forwards;
+}
+span {
+  font-size: 3.5rem;
+}
+@keyframes disk {
+  from {
+    opacity: 0;
+    font-size: 0rem;
+    transform: translateX(-500px) rotateZ(-180deg);
+  }
+  to {
+    opacity: 1;
+    font-size: 2.8rem;
+    transform: translateX(0px) rotateZ(360deg);
+  }
+}
+
+@keyframes width {
+  0% {
+    width: calc(100% - 2rem);
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.second {
+  height: 100vh;
+}
+.header {
+  height: 10vh;
+  padding-top: 1rem;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Poppins";
+  letter-spacing: 3px;
+  animation: neon 0.08s ease-in-out infinite alternate;
+}
+.nav-links li {
+  background: rgba(207, 77, 77, 1);
+  padding: 0.2rem 0.8rem;
+  border-radius: 5px;
+  outline: none;
+}
+.img {
+  position: absolute;
+  top: 47%;
+  right: 2rem;
+  width: 80vh;
+  height: 80vh;
+  /* background-image: url("./undraw_working_remotely_jh40.svg");  */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.img svg {
+  transform: translateY(-100px);
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92),
+      0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52),
+      0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78),
+      0 0 54px rgba(30, 132, 242, 0.92);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
+      0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58),
+      0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88),
+      0 0 60px rgba(30, 132, 242, 1);
+  }
+}
+
+#woman {
+  animation: woman 2s linear infinite alternate;
+}
+
+@keyframes woman {
+  0% {
+    transform: rotateZ(10deg);
+    transform-origin: center;
+  }
+  100% {
+    transform: rotateZ(-10deg);
+    transform-origin: center;
+  }
+}
+
+.part2 {
+  background: #373b44; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4286f4,
+    #373b44
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4286f4,
+    #373b44
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  transform: translateY(-1.5rem);
+}
+
+.about {
+  height: 20vh;
+  width: 100%;
+  background-image: url("https://cdn.pixabay.com/photo/2018/03/21/07/16/learning-3245793_960_720.jpg");
+  color: rgb(248, 246, 246);
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  background-position: center -50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: bolder;
+}
+
+.main-content {
+  display: flex;
+}
+.qualification {
+  background-color: #0d5c63;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 2rem;
+  color: rgb(250, 255, 255);
+  flex: 1;
+  position: relative;
+}
+.skill {
+  background-color: #44a1a0;
+}
+.skill {
+  flex: 1;
+}
+.qualification h4 {
+  width: 80%;
+  margin: auto;
+}
+.qualification h4 span {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  color: rgb(44, 206, 157);
+}
+.skill h5 {
+  display: flex;
+  font-size: 3rem;
+  justify-content: center;
+  padding: 1rem 0 2.8rem 0;
+  letter-spacing: 0.2rem;
+  color: rgb(247, 248, 248);
+}
+.skill div {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skill div ul {
+  list-style: none;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #ca4540;
+}
